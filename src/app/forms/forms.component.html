@@ -1,0 +1,26 @@
+<form #myform="ngForm" class="container bg-warning p-4 mt-3" (ngSubmit)="onClickSubmit(myform.value)">
+    <table border="1">
+        <tr>
+            <th>User Name:</th>
+            <td><input type="text" name="username" placeholder="username" ngModel></td>
+        </tr>
+        <tr>
+            <th>User City:</th>
+            <td><input type="text" name="usercity" placeholder="usercity" ngModel></td>
+        </tr>
+        <tr>
+            <th>Password Cretaed:</th>
+            <td><input type="password" name="password" placeholder="create password" ngModel></td>
+        </tr>
+        <tr>
+            <th>Mobile Number:</th>
+            <td><input type="text" name="number" placeholder="User Mobile Number" ngModel></td>
+        </tr>
+        <tr>
+            <th>User Email:</th>
+            <td><input type="email" name="email" placeholder="Email Address" ngModel></td>
+        </tr>
+    </table> <br /><br /> <br />
+    <input id="reset" type="reset" value="Reset">
+    <input id="submit" type="submit" value="Submit">
+</form>

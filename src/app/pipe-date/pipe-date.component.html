@@ -1,0 +1,7 @@
+<div [style.color]="color">
+    <em>Short Date:- </em>{{presentDate | date:'shortDate'}} <br/>
+    Full Date:- {{presentDate | date:'fullDate'}} <br/>
+    Formatted Date:- {{presentDate | date:'MM/dd/yyyy'}} <br/>
+   Hours & Minutes:- {{presentDate | date:'h:mm:ss'}} <br/>
+   Full Year:- {{presentDate | date: 'long':'UTC'}} <br/>
+</div>

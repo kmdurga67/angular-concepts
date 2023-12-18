@@ -1,0 +1,6 @@
+<h2> Welcome</h2> 
+<div *ngIf="flagvalue">to</div>
+ <h2> Angular Training</h2>
+<!-- <div *ngIf="condition">Content to render when condition is true.</div> -->
+<div *ngIf="isLogIn else isLogOut"> Hello you are logged in </div> 
+<ng-template #isLogOut> You're logged out.. </ng-template>

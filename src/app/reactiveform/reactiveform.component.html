@@ -1,0 +1,23 @@
+<h1 class="bg-warning">Angular 13 Reactive Forms Validation Example</h1>
+<form [formGroup]="form" (ngsubmit)="submit()" class="container">
+    <div class="form-group"> <label for="name">User Name:</label>
+        <input formControlName="name" id="name" type="text" class="form-control">
+        <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
+            <div *ngIf="f['name'].errors && f['name'].errors['required']">Name is required.</div>
+            <div *ngIf="f['name'].errors && f['name'].errors['minlength']">Name should be 3 character.</div>
+        </div>
+    </div><br><br>
+    <div class="form-group"> <label for="email">Email:</label>
+        <input formControlName="email" id="email" type="email" class="form-control">
+        <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+            <div *ngIf="f['email'].errors && f['email'].errors['required']">Email is required.</div>
+        </div>
+    </div><br><br>
+    <div class="form-group"> <label for="usercity">User City:</label>
+        <input formControlName="usercity" id="usercity" type="text" class="form-control">
+        <div *ngIf="f['usercity'].touched && f['usercity'].invalid" class="alert alert-danger">
+            <div *ngIf="f['usercity'].errors && f['usercity'].errors['required']">User City is required.</div>
+        </div>
+    </div><br><br>
+    <button class="btn btn-primary" [disabled]="form.invalid" type="submit">Submit</button>
+</form>
